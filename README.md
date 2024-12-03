@@ -1,9 +1,9 @@
 # Advent of Code
 
 ## Overview
-This repository contains solutions to the - [Advent of Code](https://adventofcode.com/) challenges.
+This repository contains solutions to the [Advent of Code](https://adventofcode.com/) challenges.
 
-## about Advent of Code
+## About Advent of Code
 Advent of Code is an annual set of Christmas-themed computer programming challenges that follow an advent calendar.
 Each day of the Advent of Code has a new puzzle that you can solve using any programming language you like.
 
