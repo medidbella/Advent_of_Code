@@ -1,39 +1,9 @@
 //MTRX
 
-#include <bits/stdc++.h>
-
-#define ll long long
-#define ld long double
-#define endl '\n'
-#define sp ' '
-#define vec vector
-#define mmap multimap
-#define mset multiset
-#define pr pair
-#define mp make_pair
-#define fr first
-#define sc second
-#define ins insert
-#define pf push_front
-#define pb push_back
-#define er erase
-#define sz(x) int(x.size())
-#define bg(x) x.begin()
-#define ed(x) x.end()
-#define rbg(x) x.rbegin()
-#define all(x) bg(x),x.end()
-#define rall(x) rbg(x),x.rend()
-#define sor(x) sort(all(x))
-#define rsor(x) sort(rall(x))
-#define fof find_first_of
-#define lof find_last_of
-#define py cout<<"YES\n";
-#define pn cout<<"NO\n";
-#define p1 cout<<"-1\n";
-#define debug(x) cerr<<">>>>>>>>>>>> : "<<x<<endl;
-#define re(t) while(t--)
-#define rep(i,m,n) for(int i=m;i<n;i++)
-#define rrep(i,m,n) for(int i=n;i>=m;i--)
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <vector>
 
 using namespace std;
 
@@ -43,28 +13,28 @@ int main()
     cin.tie(NULL);
     cout.tie(NULL);
 
-    ll ret = 0, a, c = 1;
+    long long ret = 0, a, c = 1;
     string str;
     while (getline(cin, str))
     {
-        vec<ll> v;
+        vector<int> v;
         stringstream s(str);
         while (s >> a)
-            v.pb(a);
-        rep(i,0,sz(v))
+            v.push_back(a);
+        for(int i = 0; i < v.size(); i++)
         {
             bool b = false;
             c = 1;
-            vec<ll>t;
-            rep(j,0,sz(v))
+            vector<int>t;
+            for(int j = 0; j < v.size(); j++)
             {
                 if (i == j)
                     continue;
-                t.pb(v[j]);
+                t.push_back(v[j]);
             }
             if (t[0] > t[1])
                 b = true;
-            rep(j,1,sz(t))
+            for(int j = 1; j < t.size(); j++)
             {
                 b ? a = t[j-1] - t[j] : a = t[j] - t[j-1];
                 if (a > 3 || a < 1)
