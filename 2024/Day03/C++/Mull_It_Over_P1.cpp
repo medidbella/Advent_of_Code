@@ -1,46 +1,15 @@
 //MTRX
 
-#include <bits/stdc++.h>
-
-#define ll long long
-#define ld long double
-#define endl '\n'
-#define sp ' '
-#define vec vector
-#define mmap multimap
-#define mset multiset
-#define pr pair
-#define mp make_pair
-#define fr first
-#define sc second
-#define ins insert
-#define pf push_front
-#define pb push_back
-#define er erase
-#define sz(x) int(x.size())
-#define bg(x) x.begin()
-#define ed(x) x.end()
-#define rbg(x) x.rbegin()
-#define all(x) bg(x),x.end()
-#define rall(x) rbg(x),x.rend()
-#define sor(x) sort(all(x))
-#define rsor(x) sort(rall(x))
-#define fof find_first_of
-#define lof find_last_of
-#define py cout<<"YES\n";
-#define pn cout<<"NO\n";
-#define p1 cout<<"-1\n";
-#define debug(x) cerr<<">>>>>>>>>>>> : "<<x<<endl;
-#define re(t) while(t--)
-#define rep(i,m,n) for(int i=m;i<n;i++)
-#define rrep(i,m,n) for(int i=n;i>=m;i--)
+#include <iostream>
+#include <sstream>
+#include <string>
 
 using namespace std;
 
 bool isValid(string &s)
 {
-    ll b = true;
-    rep(i,0,sz(s))
+    bool b = true;
+    for(int i = 0; i < s.size(); i++)
     {
         if (!isdigit(s[i]) && s[i] != ',')
             return false;
@@ -52,9 +21,9 @@ bool isValid(string &s)
     return true;
 }
 
-ll mul(string &s)
+long long mul(string &s)
 {
-    ll a = stol(s.substr(0, s.find(','))), b = stol(s.substr(s.find(',')+1));
+    long long a = stol(s.substr(0, s.find(','))), b = stol(s.substr(s.find(',')+1));
     return a*b;
 }
 
@@ -64,7 +33,7 @@ int main()
     cin.tie(NULL);
     cout.tie(NULL);
 
-    ll ret = 0;
+    long long ret = 0;
     string str, tmp;
     getline(cin, str, '\0');
     size_t i = 0, b = 0, e = 0;
@@ -76,7 +45,7 @@ int main()
         i += 3;
         if (str[i] != '(')
             continue;
-        e = str.fof(')', i);
+        e = str.find_first_of(')', i);
         if (e == str.npos)
             continue;
         i++;
