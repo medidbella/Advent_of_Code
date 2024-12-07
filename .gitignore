@@ -1,6 +1,8 @@
 .DS_Store
+.vscode
 a.out
 in
 out
 *.o
 *.a
+.txt
