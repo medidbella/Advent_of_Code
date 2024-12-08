@@ -9,7 +9,7 @@ Each day of the Advent of Code has a new puzzle that you can solve using any pro
 
 ## Repository Structure
 - Each year's solutions are organized in separate directories
-- Solutions are implemented in C/C++, Rust, OCaml & Python
+- Solutions are implemented in C/C++, C#, Rust, OCaml & Python
 - Solutions include both part 1 and part 2 of each day's challenge
 
 ## Contributions
