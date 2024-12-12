@@ -2,10 +2,8 @@
 
 #include <iostream>
 #include <string>
-#include <vector>
 #include <map>
 #include <set>
-#include <unistd.h>
 
 using namespace std;
 
