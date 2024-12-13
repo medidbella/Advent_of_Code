@@ -40,7 +40,7 @@ int main()
     string str;
     vector<string> v;
     vector<vector<bool>> vis;
-    set<pair<int,int>> se, score;
+    set<pair<int,int>> se;
 
     while (getline(cin, str))
     {
@@ -51,12 +51,9 @@ int main()
         v.push_back(str);
         H++;
     }
+    vis = vector<vector<bool>>(H, vector<bool>(W, false));
     for (auto it = se.begin(); it != se.end(); it++)
-    {
-        score = set<pair<int,int>>();
-        vis = vector<vector<bool>>(H, vector<bool>(W, false));
         fun(-1, it->first, it->second, v, vis);
-    }
     cout << RET << endl;
     return 0;
 }
