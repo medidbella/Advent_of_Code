@@ -67,7 +67,7 @@ void solve()
             g.push_back(t);
         }
     }
-    assert(g.empty() == false && "empty graph");
+
     int n = int(g.size()), m = int(g[0].size());
     ll ans = 0;
     vector<vector<bool>> vis(n, vector<bool>(m, false));
