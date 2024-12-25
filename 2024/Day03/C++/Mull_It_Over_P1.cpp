@@ -1,59 +1,37 @@
-//MTRX
-
+//SLEEPS
 #include <iostream>
-#include <sstream>
-#include <string>
+#include <fstream>
+#include <algorithm>
+#include <vector>
+#include <regex>
 
 using namespace std;
 
-bool isValid(string &s)
-{
-    bool b = true;
-    for(int i = 0; i < s.size(); i++)
-    {
-        if (!isdigit(s[i]) && s[i] != ',')
-            return false;
-        if (s[i] == ',' && !b)
-            return false;
-        if (s[i] == ',')
-            b = false;
-    }
-    return true;
+int mul(int a, int b) {
+    return a * b;
 }
 
-long long mul(string &s)
-{
-    long long a = stol(s.substr(0, s.find(','))), b = stol(s.substr(s.find(',')+1));
-    return a*b;
+int extractAndMultiply(const string& line) {
+    regex mulRegex(R"(mul\((\d+),(\d+)\))");
+    smatch match;
+    int sum = 0;
+    string::const_iterator searchStart(line.cbegin());
+    while (regex_search(searchStart, line.cend(), match, mulRegex)) {
+        int a = stoi(match[1]);
+        int b = stoi(match[2]);
+        sum += mul(a, b);
+        searchStart = match.suffix().first;
+    }
+    return sum;
 }
 
-int main()
-{
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-
-    long long ret = 0;
-    string str, tmp;
-    getline(cin, str, '\0');
-    size_t i = 0, b = 0, e = 0;
-    while (true)
-    {
-        i = str.find("mul", i);
-        if (i == str.npos)
-            break;
-        i += 3;
-        if (str[i] != '(')
-            continue;
-        e = str.find_first_of(')', i);
-        if (e == str.npos)
-            continue;
-        i++;
-        tmp = str.substr(i, e-i);
-        if (!isValid(tmp))
-            continue;
-        ret += mul(tmp);
+int main(void) {
+    ifstream inputFile("test.txt");
+    string line;
+    int totalSum = 0;
+    while (getline(inputFile, line)) {
+        totalSum += extractAndMultiply(line);
     }
-    cout << ret << endl;
+    cout << "Total sum: " << totalSum << endl;
     return 0;
 }
