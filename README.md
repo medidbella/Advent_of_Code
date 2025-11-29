@@ -1,6 +1,6 @@
 # Advent of Code
 
-Welcome to this repository for [Advent of Code](https://adventofcode.com/). This project serves as a central hub for sharing solutions, algorithms, and editorial explanations for the annual puzzles presented during the Advent of Code event.
+Welcome to [Advent of Code](https://adventofcode.com/) Solutions Repository. This project serves as a central hub for sharing solutions, algorithms, and editorial explanations for the annual puzzles presented during the Advent of Code event.
 I invite everyone to contribute their code so we can learn from different approaches and languages.
 While the primary focus is the current year, solutions for previous years are also welcome. Feel free to explore and contribute to any year you like!
 
