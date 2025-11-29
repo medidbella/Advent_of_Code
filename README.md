@@ -1,7 +1,7 @@
 # Advent of Code
 
-Welcome to the community repository for [Advent of Code](https://adventofcode.com/). This repository serves as a collection of solutions, algorithms, and editorial explanations contributed by everyone. Whether you're a seasoned coder or just starting out, we encourage you to participate and share your unique approaches to solving these puzzles.
-
+Welcome to this repository for [Advent of Code](https://adventofcode.com/). This project serves as a central hub for sharing solutions, algorithms, and editorial explanations.
+I invite everyone to contribute their code so we can learn from different approaches and languages.
 While the primary focus is the current year, solutions for previous years are also welcome. Feel free to explore and contribute to any year you like!
 
 ## Repository Structure
