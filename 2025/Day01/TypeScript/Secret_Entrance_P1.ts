@@ -29,12 +29,8 @@ class CircularBuffer
 
 function ApplyRotation(direction:string | undefined, distance:string | undefined , safeDial:CircularBuffer):number
 {
-	console.log(`d: ${direction}, dist:${distance}`)
 	if (!direction || !distance)
-	{
-		console.log("unexpected: "+ `d: ${direction}, dist:${distance}`);
 		return 0
-	}
 	if (direction == "L")
 		safeDial.RotateLeft(parseInt(distance))
 	else if (direction == "R")
