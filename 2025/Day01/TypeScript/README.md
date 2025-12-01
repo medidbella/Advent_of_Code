@@ -12,11 +12,12 @@ I have used a simple class to implement a circular buffer that represents the di
 - **Time Complexity:** O(N)
 - **Space Complexity:** O(1)
 
-<!-- ## Part 2
+## Part 2
 
 ### Approach
-Describe how the requirements changed and how you adapted your algorithm.
+made some simple modifications to same class from part one so it will keep count of 
+	the number of times a rotation has passed by 0 
 
 ### Complexity
-- **Time Complexity:** O(?)
-- **Space Complexity:** O(?) -->
+- **Time Complexity:** O(N)
+- **Space Complexity:** O(1)
