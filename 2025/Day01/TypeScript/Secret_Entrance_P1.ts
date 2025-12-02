@@ -35,7 +35,6 @@ function ApplyRotation(direction:string | undefined, distance:string | undefined
 		safeDial.RotateLeft(parseInt(distance))
 	else if (direction == "R")
 		safeDial.RotateRight(parseInt(distance))
-	console.log("dial value:", safeDial.value)
 	return +(safeDial.value == 0)
 }
 

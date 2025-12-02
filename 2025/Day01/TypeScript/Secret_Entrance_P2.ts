@@ -58,5 +58,3 @@ const puzzle_input:string[] = readFileSync("input.txt", "ascii").split('\n');
 Solver(puzzle_input, safeDial)
 
 console.log(safeDial.counter)
-
-// current = 5978
