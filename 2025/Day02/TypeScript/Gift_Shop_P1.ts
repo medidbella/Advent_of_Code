@@ -14,7 +14,6 @@ function Solver(input: string):number
 			continue;
 		}
 		if (asciiNum.slice(0, asciiNum.length/2) == asciiNum.slice(asciiNum.length/2)){
-			console.log(`${asciiNum.slice(0, asciiNum.length/2)} == ${asciiNum.slice(asciiNum.length/2)}`)
 			counter += num1;
 		}
 		num1++
