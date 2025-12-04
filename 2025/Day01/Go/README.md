@@ -33,7 +33,7 @@ Depending on the value, I add/subtract 100, and each time I get a result of 0, I
 ### Complexity
 
 
-- **Time Complexity:** O(N * S) — where N is the number of lines in the input and S is the len of the instruction.
+- **Time Complexity:** O(N) — where N is the number of lines in the input and S is the len of the instruction.
 - **Space Complexity:** O(1) — Only a few integer variables are used.
 
 
@@ -51,5 +51,5 @@ To keep counting those values, I adjusted the first solution by adding two check
 
 
 ### Complexity
-- **Time Complexity:** O(N * S) — where N is the number of lines in the input and S is the len of the instruction.
+- **Time Complexity:** O(N) — where N is the number of lines in the input and S is the len of the instruction.
 - **Space Complexity:** O(1) — Only a few integer variables are used.
